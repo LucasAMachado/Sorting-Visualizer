@@ -18,6 +18,7 @@ let sortType = 'bubbleSort'
 let timerInterval = 0;
 let seconds = 0;
 let isTimerRunning = false;
+let isSorting = false;
 const MAX_HEIGHT = 500;
 const buttons = [bubbleSort, quickSort, insertionSort, selectionSort, heapSort, sort, generateArray, arraySizeSlider]
 
@@ -363,17 +364,22 @@ resetApp.addEventListener('click', function (e) {
 });
 
 sort.addEventListener('click', async function (e) {
+    if (isSorting) {
+        return;
+    }
+
+    isSorting = true;
+
     disableButtons(buttons, true);
 
-    // Function to handle sorting for a given algorithm
     const handleSorting = async (sortMethod) => {
         timer();
         await sortMethod(arrayOfElements);
         timer();
         disableButtons(buttons, false);
         await animateArray(arrayOfElements, 'bg-green-500');
-        addSortedHighLight(arrayOfElements, 'bg-green-500')
-
+        addSortedHighLight(arrayOfElements, 'bg-green-500');
+        isSorting = false;
     };
 
     switch (sortType) {
@@ -397,8 +403,6 @@ sort.addEventListener('click', async function (e) {
             break;
     }
 });
-
-
 
 // Function to apply a highlighting effect to a specified element with a color
 function highLight(element, color) {
