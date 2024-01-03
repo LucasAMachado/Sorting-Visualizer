@@ -24,3 +24,6 @@ Please note that the visual representation of sorting algorithms in this web app
 The animations are built with the use of JavaScript promises and timeouts.
 
 Due to the asynchronous nature of JavaScript and the deliberate use of delays through promises and timeouts. I did this approach becuase it ensures clarity and comprehension, it may not accurately represent the real-time performance characteristics of the algorithms.
+
+## Access The Web Page
+https://lucasamachado.github.io/Sorting-Visualizer/
