@@ -325,6 +325,10 @@ arraySizeSlider.addEventListener('input', function (e) {
 });
 
 bubbleSort.addEventListener('click', function (e) {
+    if (bubbleSort.disabled) {
+        return;
+    }
+
     algoBeingUsed.innerHTML = 'SORTING USING BUBBLE SORT'
     sortType = 'bubbleSort'
     seconds = 0
@@ -332,6 +336,10 @@ bubbleSort.addEventListener('click', function (e) {
 });
 
 quickSort.addEventListener('click', function (e) {
+    if (quickSort.disabled) {
+        return;
+    }
+
     algoBeingUsed.innerHTML = 'SORTING USING QUICK SORT'
     sortType = 'quickSort'
     seconds = 0
@@ -339,6 +347,10 @@ quickSort.addEventListener('click', function (e) {
 });
 
 insertionSort.addEventListener('click', function (e) {
+    if (insertionSort.disabled) {
+        return;
+    }
+
     algoBeingUsed.innerHTML = 'SORTING USING INSERTION SORT'
     sortType = 'insertionSort'
     seconds = 0
@@ -346,6 +358,10 @@ insertionSort.addEventListener('click', function (e) {
 });
 
 heapSort.addEventListener('click', function (e) {
+    if (heapSort.disabled) {
+        return;
+    }
+
     algoBeingUsed.innerHTML = 'SORTING USING HEAP SORT';
     sortType = 'heapSort';
     seconds = 0;
@@ -353,11 +369,16 @@ heapSort.addEventListener('click', function (e) {
 });
 
 selectionSort.addEventListener('click', function (e) {
+    if (selectionSort.disabled) {
+        return;
+    }
+
     algoBeingUsed.innerHTML = 'SORTING USING SELECTION SORT'
     sortType = 'selectionSort'
     seconds = 0
     clock.innerHTML = `ALGO CLOCK: ${seconds} seconds`;
 });
+
 
 resetApp.addEventListener('click', function (e) {
     location.reload();
@@ -461,7 +482,6 @@ function disableButtons(buttons, disable) {
         button.disabled = disable;
     }
 }
-
 // Function to control the timer for the algorithm clock
 function timer() {
     if (!isTimerRunning) {
