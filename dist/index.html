@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/128/893/893201.png"
+      type="image/png"
+    />
+
+    <title>Sort Algo Visualizer</title>
+  </head>
+
+  <body class="bg-slate-200 flex flex-col h-screen">
+    <nav class="flex bg-gray-800 items-center h-20 w-full">
+      <img
+        class="w-10 ml-4"
+        src="https://cdn-icons-png.flaticon.com/128/893/893201.png"
+        alt=""
+      />
+      <a
+        href="#"
+        class="block ml-16 text-slate-50 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium"
+        id="generateArray"
+        >Generate Array</a
+      >
+
+      <label
+        for="arraySizeSlider"
+        class="block ml-20 mr-10 text-slate-50 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-m font-medium bg-slate-800"
+        >Adjust Array Size</label
+      >
+      <input
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white appearance-none bg-slate-600 rounded-md h-3 min-v"
+        type="range"
+        id="arraySizeSlider"
+        name="range"
+        min="4"
+        max="300"
+        value="4"
+      />
+
+      <a
+        href="#"
+        class="inline-block ml-32 text-slate-50 hover:bg-gray-700 rounded-md px-3 py-2 text-m font-medium"
+        id="bubbleSort"
+        >Bubble Sort</a
+      >
+      <a
+        href="#"
+        class="inline-block ml-3 text-slate-50 hover:bg-gray-700 rounded-md px-3 py-2 text-m font-medium"
+        id="quickSort"
+        >Quick Sort</a
+      >
+      <a
+        href="#"
+        class="inline-block ml-3 text-slate-50 hover:bg-gray-700 rounded-md px-3 py-2 text-m font-medium"
+        id="insertionSort"
+        >Insertion Sort</a
+      >
+      <a
+        href="#"
+        class="inline-block ml-3 text-slate-50 hover:bg-gray-700 rounded-md px-3 py-2 text-m font-medium"
+        id="heapSort"
+        >Heap Sort</a
+      >
+      <a
+        href="#"
+        class="inline-block ml-3 text-slate-50 hover:bg-gray-700 rounded-md px-3 py-2 text-m font-medium"
+        id="selectionSort"
+        >Selection Sort</a
+      >
+      <a
+        href="#"
+        class="inline-block ml-96 text-slate-50 hover:bg-gray-700 rounded-md px-3 py-2 text-m font-medium"
+        id="sort"
+        >Sort</a
+      >
+      <a
+        href="#"
+        class="inline-block text-slate-50 hover:bg-gray-700 rounded-md px-3 py-2 text-m font-medium"
+        id="resetApp"
+        >Reset</a
+      >
+    </nav>
+    <div class="flex-1 flex items-end justify-center relative">
+      <span
+        class="text-slate-5 text-l font-medium mb-auto mt-8 absolute top-0 left-1/2 transform -translate-x-1/2"
+        id="algoBeingUsed"
+        >SORTING USING BUBBLE SORT</span
+      >
+      <span
+        class="text-slate-5 text-l font-medium mb-auto mt-16 absolute top-0 left-1/2 transform -translate-x-1/2"
+        id="arraySize"
+        >ARRAY SIZE:</span
+      >
+      <span
+        class="text-slate-5 text-l font-medium mb-auto mt-12 absolute top-0 left-1/2 transform -translate-x-1/2"
+        id="clock"
+        >ALGO CLOCK:</span
+      >
+      <div
+        class="flex-1 flex items-end justify-center container space-x-0.5 w-3/2 h-full"
+        id="sortingContainer"
+      >
+        <!-- Your content goes here -->
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
